@@ -120,6 +120,7 @@ img.dash {
   background-color: transparent;
   border: 1px solid #ff6c00;
   border-radius: 25px;
+
   cursor: pointer;
   color: #ffffff;
   margin-left: 40px;
@@ -605,4 +606,68 @@ a.social-link:focus {
 .close-btn:hover,
 .close-btn:focus {
   background: #c61111;
+}
+/*form*/
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  margin-top: 44px;
+}
+.form-row {
+  display: flex;
+  gap: 30px;
+}
+.form .label-text {
+  color: rgba(157, 164, 189, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  position: absolute;
+  font-size: 11px;
+  top: 16px;
+  left: 0;
+}
+
+.form .input::placeholder {
+  color: rgba(157, 164, 189, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  position: absolute;
+  font-size: 11px;
+  top: 16px;
+}
+.form .input {
+  appearance: none;
+  outline: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  padding: 8px 0;
+  color: rgba(157, 164, 189, 0.4);
+}
+.form .input:placeholder-shown ~ .label-text {
+  display: none;
+}
+.form .input:focus {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+.form .input:focus::placeholder {
+  color: #ffffff;
+}
+.form .input:focus ~ .label-text {
+  color: #ffffff;
+}
+.form .form-group {
+  position: relative;
+}
+.form .input:focus ~ .label-text,
+.form .input:not(:placeholder-shown):not(:focus) ~ .label-text,
+.form .input:valid ~ .label-text {
+  top: -8px;
+  left: 0;
+}
+.form-modal {
+  display: flex;
+  flex-direction: column;
 }

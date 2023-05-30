@@ -342,7 +342,30 @@
           <!-- Book a section -->
           <section class="section booking-form">
             <h2>Book a Service</h2>
-            <button class="button-transparent">Send</button>
+
+            <form class="form" name="book-a-service">
+              <div class="form-row">
+                <label class="form-group">
+                  <input placeholder="Name*" class="input" type="text" name="name" required />
+                  <span class="label-text">Name*</span>
+                </label>
+                <label class="form-group">
+                  <input
+                    placeholder="Telephone*"
+                    class="input"
+                    type="tel"
+                    name="telephone"
+                    required
+                  />
+                  <span class="label-text">Telephone*</span>
+                </label>
+              </div>
+              <label class="form-group">
+                <textarea placeholder="Message" class="input" name="message" rows="3"></textarea>
+                <span class="label-text">Message</span>
+              </label>
+              <button type="submit" class="button-transparent">Send</button>
+            </form>
           </section>
 
           <!-- Contacts -->
@@ -410,7 +433,13 @@
     <div class="modal is-hidden" data-modal>
       <div class="modal-content">
         <button class="close-btn" data-modal-close>&times;</button>
-        Continutul modalului
+        <form class="form-modal" name=" contact-form">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required />
+          </label>
+        </form>
+        <button type="submit">Book now</button>
       </div>
     </div>
 
